@@ -9,12 +9,15 @@ async function fetchUserData() {
         let username = userNameInput.value
         let fetchCall = await fetch(`https://api.github.com/users/${username}`)
         if(fetchCall.ok == false && fetchCall.status == 403){
+            usernameStatus.style.color = "red"
             usernameStatus.innerHTML = "STATUS: API OVERLOADED PROTECTION - PLEASE WAIT 1 HOUR"
             return
         } else if(fetchCall.ok == false) {
+            usernameStatus.style.color = "red"
             usernameStatus.innerHTML = "STATUS: INVALID USERNAME"
             return  
         } else {
+            usernameStatus.style.color = "black"
             usernameStatus.innerHTML = "STATUS: VALID USERNAME"
             return fetchCall.json()  
         }
@@ -49,6 +52,7 @@ function resetUserDataToDefault() {
     userAccountCreationDate.innerHTML = "ACCOUNT CREATION DATE: N/A"
     userFollowerCount.innerHTML = "FOLLOWER COUNT: N/A"
     userFollowingCount.innerHTML = "FOLLOWING COUNT: N/A"
+    usernameStatus.style.color = "black"
     usernameStatus.innerHTML = "STATUS: N/A"
 }
 
