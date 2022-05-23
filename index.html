@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Information</title>
+    <link rel="stylesheet" href="styles_modern.css"> 
+    <link rel="shortcut icon" href="./IMAGES/GITHUB_LOGO.png">
+</head>
+<body>
+    <div class="mainContent">
+        <div>
+            <h1>FETCH GITHUB USER DATA</h1>
+            <span class="inputSpan">
+                <input id="userNameInput" placeholder="GITHUB USERNAME">
+                <button onclick="{displayUserData()}">FETCH</button>
+            </span>
+        </div>
+        <!-- Would use React components below -->
+        <div class="userData" id="userDataID">
+            <img class="dynamicUserData" id="userProfilePicture" src="./IMAGES/NA_BLANK_IMAGE.png" alt="PROFILE PICTURE" width="150px" height="150px">
+            <h3 id="userDisplayName">USERNAME: N/A</h3>
+            <hr />
+            <div class="dynamicUserData" id="userHTMLURL">LINK TO ACCOUNT: N/A</div>
+            <div class="dynamicUserData" id="userReposLink">LINK TO REPOS: N/A</div>
+            <div class="dynamicUserData" id="userAccountCreationDate">ACCOUNT CREATION DATE: N/A</div>
+            <div class="dynamicUserData" id="userFollowerCount">FOLLOWER COUNT: N/A</div>
+            <div class="dynamicUserData" id="userFollowingCount">FOLLOWING COUNT: N/A</div>
+        </div>
+        <p id="usernameStatus">STATUS: N/A</p>
+        <button onclick="resetUserDataToDefault()">RESET</button>
+        <ul hidden>
+            <p>TODO:</p>
+            <li>*Code refactor in React*</li>
+        </ul>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
