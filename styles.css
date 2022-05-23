@@ -1,5 +1,9 @@
+* {
+    font-family: arial;
+}
+
 body {
-    background-color: darkgrey;
+    background-color: whitesmoke;
 }
 
 img {
@@ -7,8 +11,11 @@ img {
     margin-bottom: 15px;
 }
 
-a, h1{
+h1{
     background-color: lightgrey;
+    border-radius: 5px;
+    border: solid 1px grey;
+    box-shadow: 0 0 2px;
     padding: 10px;
     margin: 10px;
 }
@@ -16,6 +23,17 @@ a, h1{
 hr {
     width: 80%;
     margin-bottom: 15px;
+}
+
+button {
+    margin: 0px 5px 0px 5px;
+    background-color: #d3d3d3;
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: rgb(180, 180, 180);
+    cursor: pointer;
 }
 
 .mainContent {
@@ -40,11 +58,14 @@ hr {
 }
 
 .userData {
-    background-color: lightgrey;
+    background-color: #d3d3d3;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 15px;
+    border: solid 1px grey;
+    box-shadow: 0 0 2px;
     width: 500px;
     height: 500px;
     margin: 10px;
