@@ -54,6 +54,7 @@ function resetUserDataToDefault() {
     userFollowingCount.innerHTML = "FOLLOWING COUNT: N/A"
     usernameStatus.style.color = "black"
     usernameStatus.innerHTML = "STATUS: N/A"
+    userNameInput.value = ''
 }
 
 // Assign user JSON data to elements
@@ -66,4 +67,5 @@ async function displayUserData() {
     userAccountCreationDate.innerHTML = `ACCOUNT CREATION DATE: ${userDataAsJson.created_at.substring(0,10)}`
     userFollowerCount.innerHTML = `FOLLOWER COUNT: ${userDataAsJson.followers}`
     userFollowingCount.innerHTML = `FOLLOWING COUNT: ${userDataAsJson.following}`
+    userNameInput.value = ''
 }
